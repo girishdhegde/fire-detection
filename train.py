@@ -31,8 +31,6 @@ end = 50
 # model weight save path
 # save_path = './weights/weight_res.pt'
 save_path = './weights/weight.pt'
-# intermediate output save folder
-o_path = './outputs/'
 # log file path
 # logfile = './log_res.txt'
 logfile = './log.txt'
@@ -41,11 +39,9 @@ logfile = './log.txt'
 # load = './weights/weight.pt'
 load = None
 # image dataset path
-img_path = './data/images/'
+img_path = './trainset/images/'
 # label dataset path
-lbl_path = './data/labels/'
-# total size of datset
-ln = 428
+lbl_path = './trainset/labels/'
 # size of image
 size = 448
 # creating log file if not found
@@ -54,7 +50,7 @@ if not os.path.isfile(logfile):
         pass
 
 # Creating DataLoader
-trainset = dataset(img_path, lbl_path, ln, device)
+trainset = dataset(img_path, lbl_path, (size, size), device)
 loader   = DataLoader(trainset, batch_size=bs, shuffle=True, )
 batches  = len(loader)
 
@@ -85,7 +81,7 @@ if load is not None:
         
 
 # Loss Function
-criterion  = yoloLoss(S=7, B=2, C=2)
+criterion  = yoloLoss(S=7, B=2, C=80)
 
 # train loop
 for epoch in range(start, end):
