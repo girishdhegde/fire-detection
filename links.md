@@ -3,7 +3,7 @@
 2.  [Yolo-V1 server](https://fire-server-app.herokuapp.com/mobile/)
 
 # Android App
-[Drive link](https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP/view?usp=sharing)
+https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfFIVOrhENgryuTpoC
 
 # Server Backend Repos
 1.  [Yolo-V4 server backend](https://github.com/girishdhegde/fire-server)
