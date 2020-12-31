@@ -1,4 +1,8 @@
 # fire-detection
+
+Sections: 
+### [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing)
+
 ***
 
 Fire and Smoke Detection is finding exactly where is the fire and smoke in image by putting bounding boxes. To achieve that we thought of various techniques.
@@ -7,7 +11,7 @@ Fire and Smoke Detection is finding exactly where is the fire and smoke in image
 *  Learning Based
 
 Each of the above mentioned techniques have their own pros and cons.
-
+<a name="image_processing"></a>
 ## Image Processing:
 ***
 First we thought of simple image processing technique:
