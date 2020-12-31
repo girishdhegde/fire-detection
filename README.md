@@ -1,8 +1,4 @@
 # fire-detection
-
-Sections: 
-[image processing](image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing)
-
 ***
 
 Fire and Smoke Detection is finding exactly where is the fire and smoke in image by putting bounding boxes. To achieve that we thought of various techniques.
@@ -11,7 +7,7 @@ Fire and Smoke Detection is finding exactly where is the fire and smoke in image
 *  Learning Based
 
 Each of the above mentioned techniques have their own pros and cons.
-<a name="image_processing"></a>
+
 ## Image Processing:
 ***
 First we thought of simple image processing technique:
@@ -167,6 +163,29 @@ Future Scope:
 *  Using above mentioned **Intuitions** to come up with some **meta** feature which can be used as a term in **Loss** function for this specific fire-smoke detection.
 
 
+## Deployment
+We have used freely available **Heroku** platform for deploying our model on server. It only provides memory of **512 MB** which is little bit less in perspective of **Deep Learning** Models and no **GPU**(Neccessary for high **speed** inference and low memory **Float16** support). Finally still we are able to run it in Heroku with some **optimization** and bare minimal UI.
+
+As a consequence Our Server can handle only **Single Request** at a time and  takes about **2 - 5** seconds per image inference.
+If server shows some error wait 5seconds and re-upload the file. Sorry for the Inconvinience :(.
+
+Here's the link Website:
+
+[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
+
+[Yolo-V1 Website](https://fire-smoke-app.herokuapp.com/)
+
+or use these links:
+1.  https://firesmokeserver.herokuapp.com/
+2.  https://fire-smoke-app.herokuapp.com/
+
+**Disclaimer: Image Size Should be Less Than 1MB** Hint: Take ScreenShot(It may reduce the size) and Upload.
+
+We also buit an Android app. Check out the app here
 ## Scan the QR code Open with Drive to Download the Android App:
 
 ![application](/screenshots/app.png)
+
+**Or**
+
+Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP/view?usp=sharing
