@@ -7,86 +7,57 @@ import json
 import torch
 import pickle
 import math
+import shutil
 
-def preprocess(img_path, lbl_path, out_img_path, out_lbl_path, size=448):
-    cnt = -1
-    for i in range(1, 334):
-        img = cv2.imread(img_path+str(i)+'.jpeg')
-        m, n, _ = img.shape
-        scale_m, scale_n = (size / m, size / n)
-        scaled_img = cv2.resize(img, (size, size), interpolation=cv2.INTER_CUBIC)
-        with open(lbl_path+str(i)+'.txt') as f:
-            obj = f.readlines()
-        clas = int(obj[0]) - 1
-        if clas < 2:
-            print(cnt)
-            cnt += 1
-            boxes = []
-            for box in obj[1:]:
-                x1, y1, x2, y2 = list(map(int, box.split()))
-                x1 = int(x1 * scale_n)
-                y1 = int(y1 * scale_m)
-                x2 = int(x2 * scale_n)
-                y2 = int(y2 * scale_m)
-                w  = x2 - x1
-                h  = y2 - y1
-                x  = int(x1 + w / 2)
-                y  = int(y1 + h / 2)
-                boxes.append([x1, y1, x2, y2, x, y, w, h, clas])
-            cv2.imwrite(out_img_path+str(cnt)+'.png', scaled_img)
-            with open(out_lbl_path+str(cnt)+'.json', 'w') as f:
-                json.dump(boxes, f)
-
-            # print(clas, boxes)
-            # img = cv2.rectangle(scaled_img, (x1, y1), (x2, y2), color=(255, 0, 0))
-            # cv2.imshow('img', img)
-            # cv2.waitKey(0)
-            # cv2.destroyAllWindows()
-            # break
-
-
-def encodeYolo(path, path2, size=448, S=7, C=2, total=322):
-    cell_size = size / S
-    for i in range(total):
-        print(i)
-        with open(path+str(i)+'.json') as f:
-            lbl = json.load(f)
-        target = [[[0.0 for _ in range(5+C)] for _ in range(S)] for _ in range(S)]
-        for box in lbl:
-            x, y, w, h, c = box[4:]
-            cell_x, center_x = divmod(x-1, cell_size) 
-            cell_y, center_y = divmod(y-1, cell_size) 
-            w /= size
-            h /= size
-            x = center_x / cell_size
-            y = center_y / cell_size
-            target[math.floor(cell_y)][math.floor(cell_x)][:5] = [x, y, w, h, 1.0]
-            # one hot encoding
-            target[math.floor(cell_y)][math.floor(cell_x)][5+c] = 1.0
-        with open(path2+str(i)+'.json', 'w') as f:
-            json.dump(target, f, indent=4)
+def encodeYolo(img_source, lbl_source, img_out, lbl_out, S=7, C=2):
+    '''
+    Function to convert Coco Labels to Yolo Output Format
+    '''
+    images = os.listdir(img_source)
+    labels = os.listdir(lbl_source)
+    cell_size = 1 / S
+    for i, img in enumerate(images):
+        lbl = img.split('.')[0] + '.txt'
+        if lbl in labels:
+            shutil.copy(os.path.join(img_source, img), os.path.join(img_out, img))
+            target = [[[0.0 for _ in range(5+C)] for _ in range(S)] for _ in range(S)]
+            with open(os.path.join(lbl_source, lbl)) as f:
+                boxes = f.readlines()
+            for box in boxes:
+                c, x, y, w, h = list(map(float, box.split()))
+                c = int(c)                    
+                cell_x = math.floor(x * S) 
+                cell_y = math.floor(y * S) 
+                x = x * S - cell_x 
+                y = y * S - cell_y
+                if x < 0 or x > 1 or y < 0 or y > 1:
+                    print(x, y)
+                target[cell_y][cell_x][:5] = [x, y, w, h, 1.0]
+                # one hot encoding
+                target[cell_y][cell_x][5+c] = 1.0
+            with open(os.path.join(lbl_out, lbl.replace('.txt', '.json')), 'w') as f:
+                json.dump(target, f, indent=4)
 
 
 if __name__ == '__main__':
 
     # # PREPROCESSING DATA
 
-    # img_path = './data/Images/'
-    # lbl_path = './data/Labels/'
-    # out_img_path = './trainset/images/'
-    # out_lbl_path = './trainset/labels/'
+    img_path = './coco128/images/'
+    lbl_path = './coco128/labels/'
+    out_img_path = './trainset/images/'
+    out_lbl_path = './trainset/labels/'
 
-    # size = 448
-
-    # preprocess(img_path, lbl_path, out_img_path, out_lbl_path, size)
-
-    # encodeYolo('./trainset/labels/', './trainset/elabels/', size=448, S=7, C=2, total=322)
+    encodeYolo(img_path, lbl_path, out_img_path, out_lbl_path, S=7, C=80)
     
     from utils import convert
 
-    for idx in range(300):
-        img = cv2.imread(f'./trainset/images/{idx}.png')
-        with open(f'./trainset/elabels/{idx}.json') as f:
+    images = os.listdir(img_path)
+    for i, img in enumerate(images):
+        lbl = img.split('.')[0] + '.json'
+        image = cv2.imread(os.path.join(out_img_path, img))
+        h, w, *_ = image.shape
+        with open(os.path.join(out_lbl_path, lbl)) as f:
             lbl = json.load(f)
         lbl = torch.tensor([lbl])
         # print(lbl.shape)
@@ -97,14 +68,18 @@ if __name__ == '__main__':
         for row in range(7):
             for col in range(7):
                 if pred[row, col, 4] > 0.0:
-                    pt1 = (pred[row, col,  : 2] * 448).astype(np.int32)
-                    pt2 = (pred[row, col, 2: 4] * 448).astype(np.int32)
-                    img = cv2.rectangle(img, tuple(pt1), tuple(pt2), color=(0, 0, 255))
-                    img = cv2.putText(img, str(pred[row, col, 5])+','+str(pred[row, col, 6]), 
-                                      tuple(pt1), fontFace=0, fontScale=.5, color=(0, 255, 255))
+                    x1, y1, x2, y2 = pred[row, col,  :4]
+                    x1 = int(x1 * w)
+                    x2 = int(x2 * w)
+                    y1 = int(y1 * h)
+                    y2 = int(y2 * h)
+                    # print(x1, y1, x2, y2)
+                    cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 255, 255), thickness=4)
         
-        cv2.imshow('img', img)
-        cv2.waitKey(0)
+        cv2.imshow('img', image)
+        q = cv2.waitKey(0)
         cv2.destroyAllWindows()
+        if q in {ord('q')}:
+            exit()
 
 
