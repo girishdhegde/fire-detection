@@ -1,7 +1,7 @@
 # fire-detection
 
 Sections: 
-[image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing)
+[image processing](image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing), [image processing](# image_processing)
 
 ***
 
