@@ -131,7 +131,8 @@ Inference time on cpu is around 0.5seconds per image. (When Batch size = 1)
 Here are some sample results(Yolo-V4).
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604"  src="/screenshots/loss.png">  blah |
+|<img width="1604"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/8.png">|<img width="1604"  src="/screenshots/67.png">|<img width="1604"  src="/screenshots/97.png">|
+|<img width="1604"  src="/screenshots/399.png">|<img width="1604"  src="/screenshots/1035.png">|<img width="1604"  src="/screenshots/1274.png">|<img width="1604"  src="/screenshots/2045.png">|
 
 ***
 ## What Went Wrong
