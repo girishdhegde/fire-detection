@@ -202,19 +202,19 @@ Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP
 1.  Clone this repository and open the terminal in the same directory
 2.  Install Requirements:
          
-         ```pip install -r requirements.txt``` 
+         pip install -r requirements.txt 
 3.  Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
 4.  Give appropriate paths in preprocessing.py and run:
       
-      ```python preprocessing.py```
+         python preprocessing.py
       
-      ```# Which will conver coco labels to yolo output encoded labels```
+         # Which will conver coco labels to yolo output encoded labels
 5.  Training: Adjust Hyper Parameters and traiset path in train.py and run
       
-      ```python train.py```
+         python train.py
 6.  For testing/demo
       
-      ```python predict.py [image_path.format] [weight_file.pt]```
+         python predict.py [image_path.format] [weight_file.pt]
       
 7. To Run Yolo-V4 Testing Checkout **yoloV4** folder of this repo.
       
