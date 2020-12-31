@@ -177,11 +177,11 @@ Here's the link Website:
 
 [**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
 
-[Yolo-V1 Website](https://fire-smoke-app.herokuapp.com/)
+[Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
 
 or use these links:
 1.  https://firesmokeserver.herokuapp.com/
-2.  https://fire-smoke-app.herokuapp.com/
+2.  https://fire-server-app.herokuapp.com/
 
 **Disclaimer: Image Size Should be Less Than 1MB** Hint: Take ScreenShot(It may reduce the size) and Upload.
 
@@ -222,7 +222,7 @@ Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfF
  1.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
  
  2.  [**Yolo-V1** server1 backend](https://github.com/girishdhegde/firev1_server)
-     [**Yolo-V1** server2 backend](https://github.com/girishdhegde/firev1_server)
+     [**Yolo-V1** server2 backend](https://github.com/tusharip/fire-detection)
 
 
 ## About Us:
