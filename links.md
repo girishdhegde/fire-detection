@@ -7,4 +7,4 @@
 
 # Server Backend Repos
 1.  [Yolo-V4 server backend](https://github.com/girishdhegde/fire-server)
-2.  [Yolo-V1 server backend repo1](https://github.com/girishdhegde/firev1_server)
+2.  [Yolo-V1 server1 backend](https://github.com/girishdhegde/firev1_server)
