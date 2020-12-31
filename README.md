@@ -87,3 +87,7 @@ We trained **Yolo-V1** entirely from scratch but it was still **lagging** in res
 ## Dataset Generation
 
 
+
+## Scan the QR code to Download the Android App:
+
+![application](/screenshots/app.png)
