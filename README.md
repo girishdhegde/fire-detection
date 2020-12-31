@@ -193,8 +193,7 @@ We also buit an Android app. Check out the app here
 
 **Or**
 
-Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP/view?usp=sharing
-
+Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfFIVOrhENgryuTpoC
 ***
 ***
 ## Here's How to Run The Codes:
