@@ -38,7 +38,7 @@ So we went for CNN's. When it comes to **Object Detection** **YOLO** models are 
 
 We have implemented an CNN object detection architecture similar to  yolov1 completely from **Scratch** in python using **PyTorch**. Main Features of Yolo are:
 1.  **Output Encoding.**
-2.  Non Maximal Suppression.
+2.  Non Maximum Suppression.
 3.  Intersection Over Union.
 4.  **Yolo Loss function.**
 5.  Feature Extractor(CNN)
@@ -58,6 +58,32 @@ We have implemented an CNN object detection architecture similar to  yolov1 comp
 
 #### Intersection Over Union:
 IOU is **evaluation metric** which can be used to measure accuracy of object detection based on area of bounding box and actual object.
-**IOU = Area of Overlap / Total Area** (Total area = Area of bbox + area of objects ground truth bbox - overlapping area).
+**IOU = Area of Overlap / Total Area**
+
 ![IOU](/screenshots/iou.png)
+
+
+#### Non Maximum Suppression:
+NMS is simple algorithm to select **right bounding box** among **overlapping** bounding boxes.
+1.  Keep bounding box with **Highest Confidence Score**.
+2.  **Compare** other overlapping bounding boxes with the above selected box through **IOU** metric.
+3.  If IOU is **Less** than some **threshold keep** the box **else discard** the box.
+4.  Hence it keeps **most prominent** and **unique** bounding boxes with less overlapping.
+5.  Note: compare among the only overlapping bounding boxes which belongs to **same class**.
+
+#### Yolo Loss Function
+Below image shows well engineered Yolo Loss Function. We implemented this loss function entirely from scratch in PyTorch.
+![loss](/screenshots/loss.png)
+
+
+#### Feature Extractor
+Feature axtractor is basically **backbone** of Yolo which is a **CNN** which extracts features from given input image. Mainly **Darknet** is used for this purpose in **Yolo**.
+**We** implemented both **Darknet** backbone and also **ResNet50** as backbone. In our case we **ResNet50** was working better as it was **pretrained** and we only trained some **last** layers through **Transfer Learning** due to **small dataset constarint**.
+
+
+### [Yolo-V4](https://arxiv.org/pdf/2004.10934.pdf)
+We trained **Yolo-V1** entirely from scratch but it was still **lagging** in results section as it is small network and 4-5 years old technology. So then shifted our focus towards **New State of the Art** object detector **Yolo-V4**. Due to **time** contraints we are unable to write whole yolov4 from scratch. So we have used some help from existing yolov4 implementations. We wrote only some dataloader, testing, demo/inference codes from scratch for yolov4. And we got very good results.
+
+## Dataset Generation
+
 
