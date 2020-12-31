@@ -34,10 +34,13 @@ def detect(img, net, ):
 
 if __name__ == '__main__':
     from sys
+#     from model import yolo
+    from yolo_resnet import yolo
     ''' argv: predict.py   imag_path   pretrained_weight_path'''
     path = sys.argv[1]
     load = sys.argv[2]
-    net = torch.load(load)
+    net = yolo()
+    net.load_state_dict(torch.load(load))
     net.eval()
     img = cv2.imread(path)
     out = detect(img, net)
