@@ -55,3 +55,9 @@ We have implemented an CNN object detection architecture similar to  yolov1 comp
 *  Hence prection is **(SxSx(C+5B))** tensor
 *  In our case **S = 7, C(no. of classes) = 2, B(bbox per cell) = 2**.
 ![Output Encoding](/screenshots/encoding.png)
+
+#### Intersection Over Union:
+IOU is **evaluation metric** which can be used to measure accuracy of object detection based on area of bounding box and actual object.
+**IOU = Area of Overlap / Total Area** (Total area = Area of bbox + area of objects ground truth bbox - overlapping area).
+![IOU](/screenshots/iou.png)
+
