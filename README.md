@@ -222,7 +222,7 @@ Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfF
  1.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
  
  2.  [**Yolo-V1** server1 backend](https://github.com/girishdhegde/firev1_server)
-     [**Yolo-V1** server2 backend](https://github.com/tusharip/fire-detection)
+     [**Yolo-V1** server2 backend](https://github.com/tusharip/fire_detection)
 
 
 ## About Us:
