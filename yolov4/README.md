@@ -1,4 +1,4 @@
-# Implementation of Simple Yolo-V4 code
+# Implementation of Simple Yolo-V4 testing code which takes directly image file as argument input
 
 To test run:
         
