@@ -190,3 +190,25 @@ We also buit an Android app. Check out the app here
 **Or**
 
 Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP/view?usp=sharing
+
+***
+***
+## Here's How to Run The Codes:
+***
+#### Clone this repository and open the terminal in the same directory
+#### Install Requirements:
+      pip install -r requirements.txt 
+#### Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
+#### Give appropriate paths in preprocessing.py and run:
+      python preprocessing.py
+      # Which will conver coco labels to yolo output encoded labels
+#### Training: Adjust Hyper Parameters and traiset path in train.py and run
+      python train.py
+#### For testing/demo
+      python predict.py [image_path.format] [weight_file.pt]
+      
+ ### Links to Server codes:
+ 
+ 1.  [**Yolo-V4** server backend]()
+ 
+ 2.  [**Yolo-V1** server backend]()
