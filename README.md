@@ -132,16 +132,17 @@ Inference time on cpu is around 0.5seconds per image. (When Batch size = 1)
 Here are some sample results(Yolo-V4).
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/8.png">|<img width="1604"  src="/screenshots/67.png">|<img width="1604"  src="/screenshots/97.png">|
-|<img width="1604"  src="/screenshots/399.png">|<img width="1604"  src="/screenshots/1035.png">|<img width="1604"  src="/screenshots/1274.png">|<img width="1604"  src="/screenshots/2045.png">|
+|<img width="1604"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/8.png">|<img width="1604"  src="/screenshots/67.png">|
+|<img width="1604"  src="/screenshots/97.png">|<img width="1604"  src="/screenshots/399.png">|<img width="1604"  src="/screenshots/1035.png">|
+|<img width="1604"  src="/screenshots/1274.png">|<img width="1604"  src="/screenshots/2045.png">|
 
 ***
 ## What Went Wrong
 ***
 Here are some failure cases:
 | | 
-|:-------------------------:|
-<img width="61"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/92.png">|
+|:-------------------------:|:-------------------------:|
+|<img width="61"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/92.png">|
 ### Reasoning
 The model is unable to detect fire and smoke in some images. Reasons which may be responsible are:
 *  Lack of training data: Model trained only on **800 and 400** bounding for boxes fire and smoke class respicively. Atleat **1000** bounding boxes per class is required for proper training.
