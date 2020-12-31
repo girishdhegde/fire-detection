@@ -183,7 +183,7 @@ or use these links:
 
 We also buit an Android app. Check out the app here
 ## Scan the QR code Open with Drive to Download the Android App:
-| | |
+| | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604"  src="/screenshots/app.png">|<img width="1604"  src="/screenshots/m1.jpg">|<img width="1604"  src="/screenshots/m2.jpg">|
 
