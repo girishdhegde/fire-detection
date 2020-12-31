@@ -1,6 +1,6 @@
 # Webserver Links
 1.  [Yolo-V4 server](https://firesmokeserver.herokuapp.com/)
-2.  [Yolo-V1 server](https://fire-smoke-app.herokuapp.com/)
+2.  [Yolo-V1 server](https://fire-server-app.herokuapp.com/mobile/)
 
 # Android App
 [Drive link](https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP/view?usp=sharing)
