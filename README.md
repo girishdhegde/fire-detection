@@ -243,10 +243,10 @@ Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP
     
 2.  Tushar Pharale
     
-    USN: 01FE17BCS
+    USN: 01FE17BCS233
     
-    gmail:
+    gmail:tushar20899@gmail.com
     
-    phone:
+    phone:6362256870
     
-    github: 
+    github: https://github.com/tusharip
