@@ -173,7 +173,7 @@ We have used freely available **Heroku** platform for deploying our model on ser
 As a consequence Our Server can handle only **Single Request** at a time and  takes about **2 - 5** seconds per image inference.
 If server shows some error wait 5seconds and re-upload the file. Sorry for the Inconvinience :(.
 
-Here's the link Website:
+Here's the link to Website:
 
 [**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
 
@@ -183,6 +183,7 @@ or use these links:
 1.  https://firesmokeserver.herokuapp.com/
 2.  https://fire-server-app.herokuapp.com/
 
+Upload Fire-smoke images to get bounding box detection.
 **Disclaimer: Image Size Should be Less Than 1MB** Hint: Take ScreenShot(It may reduce the size) and Upload.
 
 We also buit an Android app. Check out the app here
@@ -194,6 +195,8 @@ We also buit an Android app. Check out the app here
 **Or**
 
 Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfFIVOrhENgryuTpoC
+
+Note: Better Select Images from Gallery.
 ***
 ***
 ## Here's How to Run The Codes:
