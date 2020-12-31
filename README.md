@@ -102,6 +102,7 @@ For fire smoke detection dataset with bounding box annotations is required. But 
 *  Data Cleaning: After removing bad images we left with around total of **1000 images**.
 *  Annotation: We have used [**SuperAnnotate**](https://superannotate.com/) tool for **bounding boxes** annotation.
 *  Coco Lables: We have converted the annotations from that tool to **Coco Dataset** bbox lable format through som **Python Scripting**.
+*  Negative Data: We added about **100 images** as negatives which contains **sun, cloud, etc** images which are not **fire or smoke** but similar.
 *  Finally we created a dataset of around **750 fire** bounding boxes and **400 smoke** bounding boxes.
 
 ***
@@ -136,13 +137,31 @@ Here are some sample results(Yolo-V4).
 
 ***
 ## What Went Wrong
-Images
-Reasoning
 ***
+Here are some failure cases:
+| | 
+|:-------------------------:|
+<img width="61"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/92.png">|
+### Reasoning
+The model is unable to detect fire and smoke in some images. Reasons which may be responsible are:
+*  Lack of training data: Model trained only on **800 and 400** bounding for boxes fire and smoke class respicively. Atleat **1000** bounding boxes per class is required for proper training.
+*  Low Quality Data: Some of the images used are very low quality both resolution and lightning conditions, contrast etc.
+*  And for some images like second one shown above we think it won't be possible to detect such kind of white bounding boxes. Because if add more such kind of data model may start to detect **Cloud, Mist, Water, etc** whitish object as smoke.
+*  Finally as **fire and smoke** both don't have **definite** shape (unlike the classes in coco dataset) i.e. they are shapeles it will be very difficult for model to learn the features.
 
-***
-Conclusion
-***
+## What is it Learning, Conclusion and Future Scope
+
+As mentioned above **fire and smoke** have no **Definite** shape. Still model is able to give very **good** results especially on **fire**.
+Here is our **Intuition** behind what may be it learning. 
+1.  Most obvious one: Color
+2.  It may be learning some **Red Edge** structures inside the fire.
+3.  Highly **sharp high frequency boundary regions**.
+
+Future Scope:
+*  Labeling More qualitative data
+*  Adding adverserial negative data
+*  More Data Augmentation
+*  Using above mentioned **Intuitions** to come up with some **meta** feature which can be used as a term in **Loss** function for this specific fire-smoke detection.
 
 
 ## Scan the QR code Open with Drive to Download the Android App:
