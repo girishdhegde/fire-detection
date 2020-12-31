@@ -57,7 +57,7 @@ S = 7
 B = 2
 # Number of Classes
 # C = 20
-C = 2
+C = 80
 # Prediction Per Cell Vector Length
 E = (C+B*5)
 
@@ -122,3 +122,7 @@ if __name__ == '__main__':
     with torch.no_grad():
         out = net(inp)
     print(out.shape)
+    total_params = sum(p.numel() for p in net.parameters())
+    trainable_params = sum(p.numel() for p in net.parameters() if p.requires_grad)
+    print('Total Parameters: ', total_params)
+    print('Trainable Parameters: ', trainable_params)
