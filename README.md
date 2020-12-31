@@ -89,7 +89,11 @@ Feature axtractor is basically **backbone** of Yolo which is a **CNN** which ext
 
 ### [Yolo-V4](https://arxiv.org/pdf/2004.10934.pdf)
 ***
-We trained **Yolo-V1** entirely from scratch but it was still **lagging** in results section as it is small network and 4-5 years old technology. So then shifted our focus towards **New State of the Art** object detector **Yolo-V4**. Due to **time** contraints we are unable to write whole yolov4 from scratch. So we have used some help from existing yolov4 implementations. We wrote only some dataloader, testing, demo/inference codes from scratch for yolov4. And we got very good results.
+We trained **Yolo-V1** entirely from scratch but it was still **lagging** in results section as it is small network and 4-5 years old technology. So then shifted our focus towards **New State of the Art** object detector **Yolo-V4**. Due to **time** contraints we are unable to write whole yolov4 from scratch. So we have used some help from existing yolov4 implementations. We wrote only some dataloader, testing, demo/inference codes from scratch for yolov4. And we got very good results. 
+
+Checkout **yoloV4** folder(our testing code) of this repository to test yolov4 on fire-smoke images.
+
+Here's Link To a GitRepo to train Yolo-V4 https://github.com/WongKinYiu/PyTorch_YOLOv4.
 
 ## Dataset Generation
 ***
@@ -195,20 +199,40 @@ Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP
 ***
 ## Here's How to Run The Codes:
 ***
-#### Clone this repository and open the terminal in the same directory
-#### Install Requirements:
-      pip install -r requirements.txt 
-#### Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
-#### Give appropriate paths in preprocessing.py and run:
-      python preprocessing.py
-      # Which will conver coco labels to yolo output encoded labels
-#### Training: Adjust Hyper Parameters and traiset path in train.py and run
-      python train.py
-#### For testing/demo
-      python predict.py [image_path.format] [weight_file.pt]
+1.  Clone this repository and open the terminal in the same directory
+2.  Install Requirements:
+         ```pip install -r requirements.txt``` 
+3.  Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
+4.  Give appropriate paths in preprocessing.py and run:
+      ```python preprocessing.py```
+      ```# Which will conver coco labels to yolo output encoded labels```
+5.  Training: Adjust Hyper Parameters and traiset path in train.py and run
+      ```python train.py```
+6.  For testing/demo
+      ```python predict.py [image_path.format] [weight_file.pt]```
+      
+7. To Run Yolo-V4 Testing Checkout **yoloV4** folder of this repo.
       
  ### Links to Server codes:
  
- 1.  [**Yolo-V4** server backend]()
+ 1.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
  
- 2.  [**Yolo-V1** server backend]()
+ 2.  [**Yolo-V1** server1 backend](https://github.com/girishdhegde/https://github.com/girishdhegde/firev1_server)
+     [**Yolo-V1** server2 backend](https://github.com/girishdhegde/https://github.com/girishdhegde/firev1_server)
+
+
+## About Us:
+
+1.  GIRISH DATTATRAY HEGDE
+    USN: 01FE17BEC054
+    gmail: girsihdhegde12499@gmail.com
+    phone: 9480626935
+    Resume: attached to **resume** folder of this repo.
+    StackOverflow: https://stackoverflow.com/users/14108734/girish-dattatray-hegde
+    
+    
+2.  Tushar Pharale
+    USN: 01FE17BCS
+    gmail:
+    phone:
+    github: 
