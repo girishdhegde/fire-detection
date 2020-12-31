@@ -201,14 +201,19 @@ Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP
 ***
 1.  Clone this repository and open the terminal in the same directory
 2.  Install Requirements:
+         
          ```pip install -r requirements.txt``` 
 3.  Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
 4.  Give appropriate paths in preprocessing.py and run:
+      
       ```python preprocessing.py```
+      
       ```# Which will conver coco labels to yolo output encoded labels```
 5.  Training: Adjust Hyper Parameters and traiset path in train.py and run
+      
       ```python train.py```
 6.  For testing/demo
+      
       ```python predict.py [image_path.format] [weight_file.pt]```
       
 7. To Run Yolo-V4 Testing Checkout **yoloV4** folder of this repo.
@@ -224,15 +229,24 @@ Use this link: https://drive.google.com/file/d/1pR8G5bT3LgEfydddjil74tQMfRhIrgoP
 ## About Us:
 
 1.  GIRISH DATTATRAY HEGDE
+
     USN: 01FE17BEC054
+
     gmail: girsihdhegde12499@gmail.com
+    
     phone: 9480626935
+    
     Resume: attached to **resume** folder of this repo.
+    
     StackOverflow: https://stackoverflow.com/users/14108734/girish-dattatray-hegde
     
     
 2.  Tushar Pharale
+    
     USN: 01FE17BCS
+    
     gmail:
+    
     phone:
+    
     github: 
