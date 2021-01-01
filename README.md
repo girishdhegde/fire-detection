@@ -129,15 +129,15 @@ Yolo-v4 Trained from scratch.
 
 Models are trained on **Nvidia GTX 1660-Ti** 6GB Graphics Card(Acer Predator Laptop) using Pytorch.
 
-Inference time on cpu is around 0.5seconds per image. (When Batch size = 1)
+Inference time on cpu is around 0.1 seconds per image. (When Batch size = 1)
 
 ***
-| Model            | Parameters    | Trainable Params  | Epochs | Permormance |
-| -----------------| ------------- | ----------------- |--------|-------------| 
-| Yolo-V1          | 112166284     | 112166284 | 50     | Bad
-| Yolo-V1(ResNet50)| 26208908      | 17665612  | 50     | Average
-| Yolo-V4          | 52921437      | 52921437  | 300    | Best
-| Yolo-V4          | 6056606       | 6056606   | 350    |  Best
+| Model            | Parameters    | Trainable Params  | Epochs | Permormance | Size |
+| -----------------| ------------- | ----------------- |--------|-------------|------|
+| Yolo-V1          | 112166284     | 112166284 | 50     | Bad   | 200MB |
+| Yolo-V1(ResNet50)| 26208908      | 17665612  | 50     | Average| 100MB |
+| Yolo-V4          | 52921437      | 52921437  | 300    | Best    |200MB  |
+| Yolo-V4 iny        | 6056606      | 6056606   | 250    |  Altimate |20MB  |
 
 
 ***
@@ -253,11 +253,13 @@ Web Application:
       
  ### Links to Server codes:
  
- 1.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
+ 1.  [**Yolo-V4** server backend](https://github.com/tusharip/V4-Tiny-Server)
  
- 2.  [**Yolo-V1** server1 backend](https://github.com/tusharip/fire_detection)
+ 2.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
+ 
+ 3.  [**Yolo-V1** server1 backend](https://github.com/tusharip/fire_detection)
      [**Yolo-V1** server2 backend](https://github.com/girishdhegde/firev1_server)
- 3.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
+ 4.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
 
 
 ## About Us:
