@@ -3,18 +3,7 @@ from torchvision import models
 import torch.nn as nn
 from torch.nn import functional as F
 
-# Target Grid 
-S = 7
-# Bounding Boxex per Grid Cell
-B = 2
-# Number of Classes
-# C = 20
-C = 80
-# Prediction Per Cell Vector Length
-E = (C+B*5)
-
 resnet50 = models.resnet50(pretrained=True)
-
 # print(resnet50)
 
 # Freezing starting layers weights for transfer learning
@@ -28,15 +17,25 @@ for name, param in resnet50.named_parameters():
         param.requires_grad = False 
 
 class yolo(nn.Module):
-    def __init__(self):
+    def __init__(self, S=7, B=2, C=2):
         super().__init__()
-
+        '''
+        Params:
+        S: Target Grid 
+        B: Bboxes per grid cell
+        C: No. of classe, 80 for coco, 2 for fire-smoke ...
+        Returns:
+        Yolo-V1 model eith ResNet50 backbobe
+        '''
+        self.S = S
+        # Prediction Per Cell Vector Length
+        self.E = C + 5 * B
         self.backbone = resnet50
         # Fully Connected Layers
         self.backbone.fc = nn.Linear(2048, 1024)
         self.act1 = nn.LeakyReLU(0.1)
         self.drop_out1 = nn.Dropout(0.0)
-        self.fc2  = nn.Linear(1024, S*S*E)
+        self.fc2  = nn.Linear(1024, S*S*self.E)
         
     def forward(self, x):
         '''
@@ -55,12 +54,12 @@ class yolo(nn.Module):
         x = self.drop_out1(x)
         x = self.fc2(x)
         # reshape into prediction of shape SxSx(C+Bx5)
-        x = x.view(x.shape[0], S, S, E)
+        x = x.view(x.shape[0], self.S, self.S, self.E)
         return x
 
 if __name__ == '__main__':
     # unit test
-    net = yolo()
+    net = yolo(C=2) # Fire-Smoke Dataset
     print(net)
     inp = torch.randn((3, 3, 448, 448))
     with torch.no_grad():
