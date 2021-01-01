@@ -236,6 +236,7 @@ Note: Better Select Images from Gallery.
  
  2.  [**Yolo-V1** server1 backend](https://github.com/girishdhegde/firev1_server)
      [**Yolo-V1** server2 backend](https://github.com/tusharip/fire_detection)
+ 3.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
 
 
 ## About Us:
