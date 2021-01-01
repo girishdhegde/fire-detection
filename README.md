@@ -194,7 +194,7 @@ Here's the link to Website:
 
 
 Upload Fire-smoke images to get bounding box detection.
-**Disclaimer: Image Size Should be Less Than 1MB** Hint: Take ScreenShot(It may reduce the size) and Upload.
+**Disclaimer: Image Size Should be Less Than 4MB** 
 
 We also buit an Android app. Check out the app here
 ## Scan the QR code Open with Drive to Download the Android App:
