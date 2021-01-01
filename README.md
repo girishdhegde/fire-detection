@@ -129,7 +129,7 @@ Yolo-v4 Trained from scratch.
 
 Models are trained on **Nvidia GTX 1660-Ti** 6GB Graphics Card(Acer Predator Laptop) using Pytorch.
 
-Inference time on cpu is around 0.1 seconds per image. (When Batch size = 1)
+Inference time on cpu is around less than 0.1 seconds per image. (When Batch size = 1)
 
 ***
 | Model            | Parameters    | Trainable Params  | Epochs | Permormance | Size |
@@ -259,9 +259,11 @@ Web Application:
  
  3.  [**Yolo-V1** server1 backend](https://github.com/tusharip/fire_detection)
      [**Yolo-V1** server2 backend](https://github.com/girishdhegde/firev1_server)
+     
  4.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
 
 
+ 
 ## About Us:
 
 1.  GIRISH DATTATRAY HEGDE
