@@ -74,7 +74,7 @@ def iou(box1, box2):
 
 
 
-def nms_(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=20):
+def nms_(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=2):
     '''
     Params:
     prediction: S x S x (C + 5B) tensor
@@ -118,7 +118,7 @@ def nms_(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=20):
 
     return out
 
-def nms(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=20):
+def nms(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=2):
     '''
     Params:
     prediction: Batch_size x S x S x (C + 5B) tensor
@@ -141,8 +141,17 @@ def nms(prediction, conf_th=0.5, iou_th=0.5, S=7, B=2, C=20):
 
 
 class yoloLoss(nn.Module):
-    def __init__(self, S=7, B=2, C=20, coord=5, noobj=0.5):
+    def __init__(self, S=7, B=2, C=2, coord=5, noobj=0.5):
         super().__init__()
+        '''
+        Params:
+        S: Target Grid 
+        B: Bboxes per grid cell
+        C: No. of classe, 80 for coco, 2 for fire-smoke ...
+        coord, noobj: Weights for loss
+        Returns:
+        Yolo-V1 model loss
+        '''
         self.S = S
         self.B = B
         self.C = C
@@ -157,7 +166,7 @@ class yoloLoss(nn.Module):
         (Don't use inplace operators)
         '''
 
-        with torch.no_grad():
+        with torch.no_grads():
             bs = prediction.shape[0]
             # (center x, center y, height, width) attributes of bboxes, to 
             # (top-left corner x, top-left corner y, right-bottom corner x, right-bottom corner y)
