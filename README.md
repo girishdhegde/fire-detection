@@ -2,8 +2,7 @@
 ***
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604"  src="/screenshots/3.png">|<img width="1604"  src="/screenshots/8.png">|<img width="1604"  src="/screenshots/67.png">|
-|<img width="1604"  src="/screenshots/97.png">|<img width="1604"  src="/screenshots/m1.jpg">|<img width="1604"  src="/screenshots/m2.jpg">|
+|<img width="1604"  src="/screenshots/m1.jpg">|<img width="1604"  src="/screenshots/m2.jpg">|<img width="1604"  src="/screenshots/m3.jpg">|
 
 Fire and Smoke Detection is finding exactly where is the fire and smoke in image by putting bounding boxes. To achieve that we thought of various techniques.
 
