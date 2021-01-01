@@ -137,6 +137,7 @@ Inference time on cpu is around 0.5seconds per image. (When Batch size = 1)
 | Yolo-V1          | 112166284     | 112166284 | 50     | Bad
 | Yolo-V1(ResNet50)| 26208908      | 17665612  | 50     | Average
 | Yolo-V4          | 52921437      | 52921437  | 300    | Best
+| Yolo-V4          | 6056606       | 6056606   | 350    |  Best
 
 
 ***
@@ -184,6 +185,8 @@ If server shows some error wait 5seconds and re-upload the file. Sorry for the I
 
 Here's the link to Website:
 
+[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/)
+
 [**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
 
 [Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
@@ -203,10 +206,12 @@ We also buit an Android app. Check out the app here
 
 Use this link: https://drive.google.com/uc?export=download&id=1lXP3I9ycd7EtTM_jkzMUSj-8gjop4wVZ
 
-Note: Better take Pic from CAMERA or Select Images from gallery with LOW resolution <(500 X 500)
-although after if it is not connecting then pleaase CONTACT US because HEROKU Sucks
+Note: Better Select Images from gallery.
 **Or**
 Web Application:
+
+
+[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/)
 
 
 [**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
