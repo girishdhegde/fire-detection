@@ -216,7 +216,7 @@ Note: Better Select Images from Gallery.
       
          python predict.py [image_path.format] [weight_file.pt]
 
-7.  To test all the codes download **coco128** small 20MB dataset from [here](https://www.kaggle.com/ultralytics/coco128). Place the images at './coco128/images' and labels at './coco128/labels/' and create './trainset/images' and './trainset/labels' folders. and run the following directly:
+7.  To test all the codes download **coco128** small 20MB dataset from [here](https://www.kaggle.com/ultralytics/coco128). Place the images at **./coco128/images** and labels at **./coco128/labels/** and create **./trainset/images** and **./trainset/labels** folders. and run the following directly:
          
          pip install -r requirements.txt 
          python coco2yolo.py
