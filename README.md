@@ -22,7 +22,7 @@ First we thought of simple image processing technique:
 8.  Further **Hough Tranform** or other **Contour Hunting** Techniques can be used to get co-ordinates of rectangle.
 9.  Here's similar [example](https://stackoverflow.com/a/51756462/14108734)
 
-Main drawback of these image processing techniques is they **dont't generalize** very well. We have **engineered** all features by hand. But they are **very fast**. 
+Main drawback of these image processing techniques is they **dont't generalize** very well. We have **engineere** all features by hand. But they are **very fast**. 
 We thought of extracting some features like edges inside the fire i.e. red line like structure and using it for detection. But we din't get any considerable results. So we went for **Deep Learning** Techniques.
 
 ## Deep Learning:
@@ -204,19 +204,26 @@ Note: Better Select Images from Gallery.
          
          pip install -r requirements.txt 
 3.  Download or annotate the dataset in [Coco lables format](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data)
-4.  Give appropriate paths in preprocessing.py and run:
+4.  Give appropriate paths in coco2yolo.py and run:
       
-         python preprocessing.py
+         python coco2yolo.py
       
-         # Which will conver coco labels to yolo output encoded labels
-5.  Training: Adjust Hyper Parameters and traiset path in train.py and run
+         # Which will convert coco labels to yolo output encoded labels
+5.  Training: Adjust Hyper Parameters, models(yolo, yoloresnet50), other variables, trainset path in settings(top) section of train.py and run
       
          python train.py
-6.  For testing/demo
+6.  For testing/demo adjust the model name and classes in predict.py and run
       
          python predict.py [image_path.format] [weight_file.pt]
+
+7.  To test all the codes download **coco128** small 20MB dataset from [here](https://www.kaggle.com/ultralytics/coco128). Place the images at './coco128/images' and labels at './coco128/labels/' and create './trainset/images' and './trainset/labels' folders. and run the following directly:
+         
+         pip install -r requirements.txt 
+         python coco2yolo.py
+         python train.py
+   If training starts you are good to go. Label any datatset and follow the above instructions to train the yolo-v1 model.
       
-7. To Run Yolo-V4 Testing Checkout **yoloV4** folder of this repo.
+7. To Run Yolo-V4 Testing on Fire-Smoke Dataset Checkout **yoloV4** folder of this repo.
       
  ### Links to Server codes:
  
