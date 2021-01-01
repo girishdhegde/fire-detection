@@ -10,9 +10,6 @@ import math
 import shutil
 
 def encodeYolo(img_source, lbl_source, img_out, lbl_out, S=7, C=2):
-    '''
-    Function to convert Coco Labels to Yolo Output Format
-    '''
     images = os.listdir(img_source)
     labels = os.listdir(lbl_source)
     cell_size = 1 / S
@@ -48,38 +45,41 @@ if __name__ == '__main__':
     out_img_path = './trainset/images/'
     out_lbl_path = './trainset/labels/'
 
-    encodeYolo(img_path, lbl_path, out_img_path, out_lbl_path, S=7, C=80)
+    C = 80 # 2 for firesmoke, 80 for coco
+    encodeYolo(img_path, lbl_path, out_img_path, out_lbl_path, S=7, C=C)
     
-    from utils import convert
 
-    images = os.listdir(img_path)
-    for i, img in enumerate(images):
-        lbl = img.split('.')[0] + '.json'
-        image = cv2.imread(os.path.join(out_img_path, img))
-        h, w, *_ = image.shape
-        with open(os.path.join(out_lbl_path, lbl)) as f:
-            lbl = json.load(f)
-        lbl = torch.tensor([lbl])
-        # print(lbl.shape)
+    # Unit Test
+    # from utils import convert
 
-        pred = convert(lbl, s=7, B=1)[0].numpy()
-        # print(pred.shape)
+    # images = os.listdir(img_path)
+    # for i, img in enumerate(images):
+    #     lbl = img.split('.')[0] + '.json'
+    #     image = cv2.imread(os.path.join(out_img_path, img))
+    #     h, w, *_ = image.shape
+    #     with open(os.path.join(out_lbl_path, lbl)) as f:
+    #         lbl = json.load(f)
+    #     lbl = torch.tensor([lbl])
+    #     # print(lbl.shape)
 
-        for row in range(7):
-            for col in range(7):
-                if pred[row, col, 4] > 0.0:
-                    x1, y1, x2, y2 = pred[row, col,  :4]
-                    x1 = int(x1 * w)
-                    x2 = int(x2 * w)
-                    y1 = int(y1 * h)
-                    y2 = int(y2 * h)
-                    # print(x1, y1, x2, y2)
-                    cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 255, 255), thickness=4)
+    #     pred = convert(lbl, s=7, B=1)[0].numpy()
+    #     # print(pred.shape)
+
+    #     for row in range(7):
+    #         for col in range(7):
+    #             if pred[row, col, 4] > 0.0:
+    #                 x1, y1, x2, y2 = pred[row, col,  :4]
+    #                 x1 = int(x1 * w)
+    #                 x2 = int(x2 * w)
+    #                 y1 = int(y1 * h)
+    #                 y2 = int(y2 * h)
+    #                 # print(x1, y1, x2, y2)
+    #                 cv2.rectangle(image, (x1, y1), (x2, y2), color=(0, 255, 255), thickness=4)
         
-        cv2.imshow('img', image)
-        q = cv2.waitKey(0)
-        cv2.destroyAllWindows()
-        if q in {ord('q')}:
-            exit()
+    #     cv2.imshow('img', image)
+    #     q = cv2.waitKey(0)
+    #     cv2.destroyAllWindows()
+    #     if q in {ord('q')}:
+    #         exit()
 
 
