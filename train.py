@@ -11,10 +11,13 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 # import torchvision.utils as vutils
 
-# from model import yolo
-from yolo_resnet import yolo
 from utils import convert, iou, nms, yoloLoss
 from dataset import dataset
+
+
+# from model import yolo # Chose any one of these
+from yolo_resnet import yolo
+
 
 # settings
 #----------------------------------------------------------------------------------------------------------------------------------------
@@ -72,7 +75,7 @@ batches  = len(loader)
 print('Total training samples: ', len(trainset))
 
 # Initializing the model
-net = yolo().to(device)
+net = yolo(S=S, B=B, C=C).to(device)
 net.train()
 
 # Initializing Adam Optimizer With Model Parameters
