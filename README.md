@@ -179,9 +179,7 @@ Here's the link to Website:
 
 [Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
 
-or use these links:
-1.  https://firesmokeserver.herokuapp.com/
-2.  https://fire-server-app.herokuapp.com/
+
 
 Upload Fire-smoke images to get bounding box detection.
 **Disclaimer: Image Size Should be Less Than 1MB** Hint: Take ScreenShot(It may reduce the size) and Upload.
