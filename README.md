@@ -190,8 +190,8 @@ Upload Fire-smoke images to get bounding box detection.
 We also buit an Android app. Check out the app here
 ## Scan the QR code Open with Drive to Download the Android App:
 | | | |
-|:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604"  src="/screenshots/app.png">|<img width="1604"  src="/screenshots/m1.jpg">|<img width="1604"  src="/screenshots/m2.jpg">|
+|:-------------------------:|:-------------------------:|
+|<img width="1604"  src="/screenshots/app.png">|<img width="1604"  src="/screenshots/m1.jpg">|
 
 **Or**
 
@@ -234,8 +234,8 @@ Note: Better Select Images from Gallery.
  
  1.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
  
- 2.  [**Yolo-V1** server1 backend](https://github.com/girishdhegde/firev1_server)
-     [**Yolo-V1** server2 backend](https://github.com/tusharip/fire_detection)
+ 2.  [**Yolo-V1** server1 backend](https://github.com/tusharip/fire_detection)
+     [**Yolo-V1** server2 backend](https://github.com/girishdhegde/firev1_server)
  3.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
 
 
