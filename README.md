@@ -201,7 +201,7 @@ We also buit an Android app. Check out the app here
 
 **Or**
 
-Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfFIVOrhENgryuTpoC
+Use this link: https://drive.google.com/uc?export=download&id=1lXP3I9ycd7EtTM_jkzMUSj-8gjop4wVZ
 
 Note: Better take Pic from CAMERA or Select Images from gallery with LOW resolution <(500 X 500)
 although after if it is not connecting then pleaase CONTACT US because HEROKU Sucks
