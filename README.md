@@ -22,7 +22,7 @@ First we thought of simple image processing technique:
 8.  Further **Hough Tranform** or other **Contour Hunting** Techniques can be used to get co-ordinates of rectangle.
 9.  Here's similar [example](https://stackoverflow.com/a/51756462/14108734)
 
-Main drawback of these image processing techniques is they **dont't generalize** very well. We have **engineere** all features by hand. But they are **very fast**. 
+Main drawback of these image processing techniques is they **dont't generalize** very well. We have **engineered** all features by hand. But they are **very fast**. 
 We thought of extracting some features like edges inside the fire i.e. red line like structure and using it for detection. But we din't get any considerable results. So we went for **Deep Learning** Techniques.
 
 ## Deep Learning:
