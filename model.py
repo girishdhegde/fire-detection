@@ -51,16 +51,6 @@ conv_structure = [
 
 ]
 
-# Target Grid 
-S = 7
-# Bounding Boxex per Grid Cell
-B = 2
-# Number of Classes
-# C = 20
-C = 80
-# Prediction Per Cell Vector Length
-E = (C+B*5)
-
 
 class createConv(nn.Module):
     def __init__(self, params):
@@ -78,8 +68,19 @@ class createConv(nn.Module):
 
 
 class yolo(nn.Module):
-    def __init__(self):
+    def __init__(self, S=7, B=2, C=2):
         super().__init__()
+        '''
+        Params:
+        S: Target Grid 
+        B: Bboxes per grid cell
+        C: No. of classe, 80 for coco, 2 for fire-smoke ...
+        Returns:
+        Yolo-V1 model
+        '''
+        self.S = S
+        # Prediction Per Cell Vector Length
+        self.E = (C + B * 5)
         # Creating BAckbone fron Configuration
         self.conv_layers = [nn.MaxPool2d(*params) if len(params) == 2 
                             else createConv(params)
@@ -91,8 +92,8 @@ class yolo(nn.Module):
         self.fc1  = nn.Linear(1024*S*S, 1024)
         self.act1 = nn.LeakyReLU(0.1, inplace=True)
         self.dout1 = nn.Dropout(0.0)
-        self.fc2  = nn.Linear(1024, S*S*E)
-        # self.fc2  = nn.Linear(512, S*S*E)
+        self.fc2  = nn.Linear(1024, S*S*self.E)
+        # self.fc2  = nn.Linear(512, S*S*self.E)
         
     def forward(self, x):
         '''
@@ -111,12 +112,12 @@ class yolo(nn.Module):
         x = self.dout1(x)
         x = self.fc2(x)
         # reshape into prediction of shape SxSx(C+Bx5)
-        x = x.view(x.shape[0], S, S, E)
+        x = x.view(x.shape[0], self.S, self.S, self.E)
         return x
 
 if __name__ == '__main__':
     # unit Test
-    net = yolo()
+    net = yolo(C=2) # fire-smoke dataset
     print(net)
     inp = torch.randn((3, 3, 448, 448))
     with torch.no_grad():
