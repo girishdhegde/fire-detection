@@ -11,12 +11,14 @@ import torch.optim as optim
 from torch.utils.data import Dataset, DataLoader
 # import torchvision.utils as vutils
 
-from model import yolo
-# from yolo_resnet import yolo
+# from model import yolo
+from yolo_resnet import yolo
 from utils import convert, iou, nms, yoloLoss
 from dataset import dataset
 
 # settings
+#----------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------
 # model training device cuda or cpu
 # device = torch.device('cpu')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -44,6 +46,19 @@ img_path = './trainset/images/'
 lbl_path = './trainset/labels/'
 # size of image
 size = 448
+# Target Grid 
+S = 7
+# Bounding Boxex per Grid Cell
+B = 2
+# Number of Classes
+C = 80 # 2 fir fire smoke dataset 80 for coco
+# Prediction Per Cell Vector Length
+E = (C+B*5)
+
+#----------------------------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------------------------------------------------------------------------------------------
+
+
 # creating log file if not found
 if not os.path.isfile(logfile):
     with open(logfile, 'w') as f:
@@ -77,11 +92,11 @@ if load is not None:
         if state.__contains__('optimizer'):
             optimizer.load_state_dict(state['optimizer'])
     except:
-        print('Unable load model')
+        print('Unable to load model')
         
 
 # Loss Function
-criterion  = yoloLoss(S=7, B=2, C=80)
+criterion  = yoloLoss(S=S, B=B, C=C)
 
 # train loop
 for epoch in range(start, end):
