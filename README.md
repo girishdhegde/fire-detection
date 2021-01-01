@@ -221,6 +221,8 @@ Note: Better Select Images from Gallery.
          pip install -r requirements.txt 
          python coco2yolo.py
          python train.py
+         python predict.py image_path.format ./weights/weight.pt
+         
    If training starts you are good to go. Label any datatset and follow the above instructions to train the yolo-v1 model.
       
 7. To Run Yolo-V4 Testing on Fire-Smoke Dataset Checkout **yoloV4** folder of this repo.
