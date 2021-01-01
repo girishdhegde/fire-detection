@@ -112,6 +112,12 @@ For fire smoke detection dataset with bounding box annotations is required. But 
 *  Negative Data: We added about **100 images** as negatives which contains **sun, cloud, etc** images which are not **fire or smoke** but similar.
 *  Finally we created a dataset of around **750 fire** bounding boxes and **400 smoke** bounding boxes.
 
+
+Here are the links to datasets annotated by us:
+
+1. https://drive.google.com/drive/folders/1GahPOw1Z-dGvVmph6SOKo9bkUgUpHjnV?usp=sharing
+2. https://drive.google.com/file/d/123MTnRJfkThgJxqOSP6FexqjwFtJGPlQ/view?usp=drivesdk
+
 ***
 ## Training
 ***
@@ -198,6 +204,16 @@ We also buit an Android app. Check out the app here
 Use this link: https://drive.google.com/uc?export=download&id=1clF1HD9qS-7lUVIfFIVOrhENgryuTpoC
 
 Note: Better Select Images from Gallery.
+
+**Or**
+Web Application:
+
+
+[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
+
+
+[Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
+
 ***
 ***
 ## Here's How to Run The Codes:
