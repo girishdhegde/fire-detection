@@ -1,6 +1,6 @@
 # fire-detection
 ***
-![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif | width=300)![](https://github.com/girishdhegde/aps-2020/blob/master/dance.gif | width=300)
+![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif&s=200)![](https://github.com/girishdhegde/aps-2020/blob/master/dance.gif | width=300)
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
