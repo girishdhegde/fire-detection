@@ -1,9 +1,6 @@
 # fire-detection
 ***
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://github.com/girishdhegde/aps-2020/blob/master/slo-mo.mp4)
-<video width="320" height="240" autoplay loop>
-  <source src="https://github.com/girishdhegde/aps-2020/blob/master/slo-mo.mp4" type="video/mp4" />
-</video>
+![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif)
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
