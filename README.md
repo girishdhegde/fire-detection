@@ -1,5 +1,8 @@
 # fire-detection
 ***
+<p align="center">
+  <img src="https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif" />
+</p>
                   ![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/dance.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/rv.gif)
 
 | | | |
