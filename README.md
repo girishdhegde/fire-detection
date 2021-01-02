@@ -133,7 +133,7 @@ Yolo-v4 Trained from scratch.
 
 Models are trained on **Nvidia GTX 1660-Ti** 6GB Graphics Card(Acer Predator Laptop) using Pytorch.
 
-Inference time on cpu is around less than 0.1 seconds per image. (When Batch size = 1)
+Inference time on cpu is more than 60fps. (When Batch size = 1)
 
 ***
 | Model            | Parameters    | Trainable Params  | Epochs | Permormance | Size |
@@ -166,19 +166,6 @@ The model is unable to detect fire and smoke in some images. Reasons which may b
 *  And for some images like second one shown above we think it won't be possible to detect such kind of white bounding boxes. Because if add more such kind of data model may start to detect **Cloud, Mist, Water, etc** whitish object as smoke.
 *  Finally as **fire and smoke** both don't have **definite** shape (unlike the classes in coco dataset) i.e. they are shapeles it will be very difficult for model to learn the features.
 
-## What is it Learning, Conclusion and Future Scope
-
-As mentioned above **fire and smoke** have no **Definite** shape. Still model is able to give very **good** results especially on **fire**.
-Here is our **Intuition** behind what may be it learning. 
-1.  Most obvious one: Color
-2.  It may be learning some **Red Edge** structures inside the fire.
-3.  Highly **sharp high frequency boundary regions**.
-
-Future Scope:
-*  Labeling More qualitative data
-*  Adding adverserial negative data
-*  More Data Augmentation
-*  Using above mentioned **Intuitions** to come up with some **meta** feature which can be used as a term in **Loss** function for this specific fire-smoke detection.
 
 
 ## Deployment
@@ -267,7 +254,21 @@ Web Application:
      
  4.  [**Android** Studio Project](https://drive.google.com/uc?export=download&id=1Ui1FDZhF6EnsQrWEXrz8BLJwPZKaYlyf)
 
+## What is it Learning, Conclusion and Future Scope
 
+As mentioned above **fire and smoke** have no **Definite** shape. Still model is able to give very **good** results especially on **fire**.
+Here is our **Intuition** behind what may be it learning. 
+1.  Most obvious one: Color
+2.  It may be learning some **Red Edge** structures inside the fire.
+3.  Highly **sharp high frequency boundary regions**.
+
+Future Scope:
+*  Labeling More qualitative data
+*  Adding adverserial negative data
+*  More Data Augmentation
+*  Using above mentioned **Intuitions** to come up with some **meta** feature which can be used as a term in **Loss** function for this specific fire-smoke detection.
+
+## Live Fire-Smoke Detection App in Android Coming Soon.............
  
 ## About Us:
 
