@@ -1,9 +1,10 @@
 # fire-detection
 ***
-<p align="center">
-  <img src="https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif" />
-</p>
-                  ![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/dance.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/rv.gif)
+| | | 
+|:-------------------------:|:-------------------------:|
+|<img width="1604"  src="https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif">|<img width="1604"  src="https://github.com/girishdhegde/aps-2020/blob/master/dance.gif">|<img width="1604"  src="/screenshots/Screenshot_2021-01-01-11-02-43-692_com.example.myapplication.jpg">|
+
+![](https://github.com/girishdhegde/aps-2020/blob/master/slomo.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/dance.gif)![](https://github.com/girishdhegde/aps-2020/blob/master/rv.gif)
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
