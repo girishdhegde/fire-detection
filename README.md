@@ -102,6 +102,8 @@ Checkout **yoloV4** folder(our testing code) of this repository to test yolov4 o
 
 Here's Link To a GitRepo to train Yolo-V4 https://github.com/WongKinYiu/PyTorch_YOLOv4.
 
+We have **trained** 3 varients of yolov4. Among which **yolov4-tiny** is working best. We think that reason underperformance of large yolo-v4 on our dataset is because of small dataset size.
+
 ## Dataset Generation
 ***
 
