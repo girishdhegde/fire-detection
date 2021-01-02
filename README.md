@@ -189,11 +189,11 @@ If server shows some error wait 5seconds and re-upload the file. Sorry for the I
 
 Here's the link to Website:
 
-[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/)
+[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/) (server highly reliable)
 
-[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
+[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/) (server not reliable)
 
-[Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
+[Yolo-V1 Website](https://fire-server-app.herokuapp.com/) (server not reliable)
 
 
 
@@ -215,13 +215,13 @@ Note: Better Select Images from gallery.
 Web Application:
 
 
-[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/)
+[**Yolo-V4 Tiny Website**](https://v4-tiny-app.herokuapp.com/) (server highly reliable)
 
 
-[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/)
+[**Yolo-V4 Website**](https://firesmokeserver.herokuapp.com/) (server not reliable)
 
 
-[Yolo-V1 Website](https://fire-server-app.herokuapp.com/)
+[Yolo-V1 Website](https://fire-server-app.herokuapp.com/) (server not reliable)
 
 ***
 ***
