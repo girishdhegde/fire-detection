@@ -246,7 +246,7 @@ Web Application:
       
  ### Links to Server codes:
  
- 1.  [**Yolo-V4** server backend](https://github.com/tusharip/V4-Tiny-Server)
+ 1.  [**Yolo-V4-tiny** server backend](https://github.com/tusharip/V4-Tiny-Server)
  
  2.  [**Yolo-V4** server backend](https://github.com/girishdhegde/fire-server)
  
