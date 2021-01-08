@@ -212,7 +212,7 @@ Web Application:
 [Yolo-V1 Website](https://fire-server-app.herokuapp.com/) (server not reliable)
 
 
-Disclaimer: For the first input image server may take longer.(to wake Heroku from hibernation)
+**Disclaimer: For the first input image server may take longer.(to wake Heroku from hibernation**
 
 
 ***
