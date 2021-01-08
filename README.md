@@ -135,7 +135,7 @@ Yolo-v4 Trained from scratch.
 
 Models are trained on **Nvidia GTX 1660-Ti** 6GB Graphics Card(Acer Predator Laptop) using Pytorch.
 
-Inference time on cpu is more than 60fps. (When Batch size = 1)
+Inference time on is about 30fps. (When Batch size = 1)
 
 ***
 | Model            | Parameters    | Trainable Params  | Epochs | Permormance | Size |
