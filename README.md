@@ -195,6 +195,7 @@ We also buit an Android app. Check out the app here
 |:-------------------------:|:-------------------------:|
 |<img width="1604"  src="/screenshots/v4tiny.png">|<img width="1604"  src="/screenshots/m1.jpg">|
 
+Disclaimer: For the first input image server may take longer.(to wake Heroku from hibernation)
 **Or**
 
 Use this link: https://drive.google.com/uc?export=download&id=1lXP3I9ycd7EtTM_jkzMUSj-8gjop4wVZ
