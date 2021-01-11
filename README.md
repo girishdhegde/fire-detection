@@ -174,7 +174,7 @@ The model is unable to detect fire and smoke in some images. Reasons which may b
 We have used freely available **Heroku** platform for deploying our model on server. It only provides memory of **512 MB** which is little bit less in perspective of **Deep Learning** Models and no **GPU**(Neccessary for high **speed** inference and low memory **Float16** support). Finally still we are able to run it in Heroku with some **optimization** and bare minimal UI.
 
 As a consequence Our Server can handle only **Single Request** at a time and  takes about **2 - 5** seconds per image inference.
-If server shows some error wait 5seconds and re-upload the file. Sorry for the Inconvinience :(.
+If server shows some error wait 5seconds and re-upload the file. Sorry for the Inconvinience :( Heroku sucks
 
 Here's the link to Website:
 
@@ -212,7 +212,7 @@ Web Application:
 [Yolo-V1 Website](https://fire-server-app.herokuapp.com/) (server not reliable)
 
 
-**Disclaimer: For the first input image server may take longer.(to wake Heroku from hibernation**
+**Disclaimer: For the first input image server may take longer.(to wake Heroku from hibernation)**
 
 
 ***
@@ -273,7 +273,6 @@ Future Scope:
 *  More Data Augmentation
 *  Using above mentioned **Intuitions** to come up with some **meta** feature which can be used as a term in **Loss** function for this specific fire-smoke detection.
 
-## Live Fire-Smoke Detection App in Android Coming Soon.............
  
 ## About Us:
 
