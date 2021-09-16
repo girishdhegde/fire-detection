@@ -220,7 +220,7 @@ Web Application:
 
 ***
 ***
-## Here's How to Run The Codes:
+## Usage
 ***
 1.  Clone this repository and open the terminal in the same directory
 2.  Install Requirements:
